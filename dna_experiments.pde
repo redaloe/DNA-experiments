@@ -1,12 +1,10 @@
-//Doesnt work. Fix it bitch
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-String current_file="Adam";
+String current_file="Adama";
 String DNA=new String();
-float mutation_rate=0.01;
+float mutation_rate=0.1;
 float frameshift_rate=0;
 int codons=92;
 int nucleotides=codons*3; // in nucleotides
@@ -19,7 +17,7 @@ void setup(){
 //    print(String.format("%1$03X",i));
 }
 void draw(){
-  DNA=breedFiles("Adam","");
+  //DNA=breedFiles("Farah","Genevieve");
   //for(int i=0; i<codons;i+=3){
   //  int r=codonValue(i)%256;
   //  int g=codonValue(i+1)%256;
@@ -67,7 +65,7 @@ int codonValue(int i){ // reads codons and returns them as integers. the parse i
   println(DNA.substring(i*3,i*3+3));
   return Integer.parseInt(DNA.substring(i*3,i*3+3),16);
 }
-String codonText(int i){ // reads codons and returns them as integers. the parse int thingy is to convert hex to dec
+String codonText(int i){ // reads codons and returns them as strings. the parse int thingy is to convert hex to dec
   println(DNA.substring(i*3,i*3+3));
   return DNA.substring(i*3,i*3+3);
 }
